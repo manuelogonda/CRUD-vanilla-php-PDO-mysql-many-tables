@@ -35,7 +35,9 @@ FROM Products AS p
 
 <body>
   <h1>Product Inventory</h1>
-  <a href="eproduct_createPost.php" ><button type="button">Create New Product</button></a>
+  <a href="eproduct_create.php" ><button type="button">Create New Product</button></a>
+  <a href="ecategory_create.php" ><button type="button">Create New Category</button></a>
+  <a href="esupplier_create.php" ><button type="button">Create New Supplier</button></a>
   <?php if (empty($products)) : ?>
     <p>Product not found</p>
   <?php else: ?>
@@ -55,7 +57,7 @@ FROM Products AS p
             <td><?= htmlspecialchars($product['name']); ?></td>
             <td><?= htmlspecialchars($product['price']); ?></td>
             <td><?= htmlspecialchars($product['category_name']); ?></td>
-            <td><?= htmlspecialchars($product['supplier_id']); ?></td>
+            <td><?= htmlspecialchars($product['supplier_name']); ?></td>
             <td>
               <form action="edelete.php" method="post">
                 <input type="hidden" name="">
