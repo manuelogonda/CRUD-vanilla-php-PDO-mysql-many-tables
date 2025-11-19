@@ -65,7 +65,7 @@ FROM Products AS p
                 <button type="submit">Delete</button>
               </form>
 
-              <form action="eupdate.php" method="POST">
+              <form action="eupdate_product.php" method="POST">
                 <input type="hidden" name="action" value="edit_product">
                 <input type="hidden" name="id" value="<?= htmlspecialchars($product['id']) ?>">
                 <button type="submit">Edit</button>
