@@ -59,13 +59,15 @@ FROM Products AS p
             <td><?= htmlspecialchars($product['category_name']); ?></td>
             <td><?= htmlspecialchars($product['supplier_name']); ?></td>
             <td>
-              <form action="edelete.php" method="post">
-                <input type="hidden" name="">
+              <form action="edelete_product.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?')">
+                <input type="hidden" name="action" value="delete_product">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($product['id']) ?>">
                 <button type="submit">Delete</button>
               </form>
-              <br>
-              <form action="eupdate.php" method="post">
-                <input type="hidden" name="">
+
+              <form action="eupdate.php" method="POST">
+                <input type="hidden" name="action" value="edit_product">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($product['id']) ?>">
                 <button type="submit">Edit</button>
               </form>
             </td>
