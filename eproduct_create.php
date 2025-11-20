@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <title>Create Product Inventory</title>
 </head>
 <body>
-    <form action="eproduct_create.php" method="POST">
+    <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <label for="productname">Product Name</label>
         <input type="text" name="name"> <br><br>
         <label for="price">Price</label>
