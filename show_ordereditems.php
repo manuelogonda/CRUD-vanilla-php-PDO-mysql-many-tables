@@ -9,7 +9,6 @@ SELECT
     Oi.price_at_sale,
     o.id AS order_id,
     o.order_date,
-    o.total_amount,
     p.id AS product_id,
     p.price AS product_price,
     p.name AS product_name
@@ -53,7 +52,6 @@ $pdo = null;
                     <th>price_at_sale</th>
                     <th>order_id</th>
                     <th>order_date</th>
-                    <th>total_amount</th>
                     <th>product_id</th>
                     <th>product_price</th>
                     <th>product_name</th>
@@ -68,7 +66,6 @@ $pdo = null;
                     <td><?= htmlspecialchars($ordered_Item['price_at_sale']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['order_id']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['order_date']) ?></td>
-                    <td><?= htmlspecialchars($ordered_Item['total_amount']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['product_id']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['product_price']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['product_name']) ?></td>
@@ -79,7 +76,7 @@ $pdo = null;
                             <button type="submit">Delete Item</button>
                         </form>
 
-                        <form action="update_ordered_item" method="POST">
+                        <form action="update_ordered_item.php" method="POST">
                             <input type="hidden" name="action" value="edit_ordered_item">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($ordered_Item['Oder_item_id']) ?>">
                             <button type="submit">Edit Item</button>
