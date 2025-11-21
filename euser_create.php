@@ -19,6 +19,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <title>Create a user</title>
 </head>
 <body>
+     <a href="show_ordereditems.php"><button type="button">Go Back</button></a>
     <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <label for="fullname">Fullname</label>
          <input type="text" name="name">

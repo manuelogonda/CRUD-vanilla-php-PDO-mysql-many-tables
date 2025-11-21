@@ -76,13 +76,13 @@ $pdo = null;
                         <form action="delete_ordered_item" method="POST" onsubmit="return confirm('Be sure to delete this ordered item')">
                            <input type="hidden" name="action" value="delete_ordered_item">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($ordered_Item['Oder_item_id']) ?>">
-                            <button type="submit">Delete Order</button>
+                            <button type="submit">Delete Item</button>
                         </form>
 
                         <form action="update_ordered_item" method="POST">
                             <input type="hidden" name="action" value="edit_ordered_item">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($ordered_Item['Oder_item_id']) ?>">
-                            <button type="submit">Edit Order</button>
+                            <button type="submit">Edit Item</button>
                         </form>
                     </td>
                 </tr>

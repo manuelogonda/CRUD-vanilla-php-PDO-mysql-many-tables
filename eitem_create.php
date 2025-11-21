@@ -25,6 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <title>Create an OrderItem</title>
 </head>
 <body>
+     <a href="show_ordereditems.php"><button type="button">Go Back-></button></a>
     <h2>Create an OrderItem</h2>
     <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
         <label for="order_id">Order Number:</label>

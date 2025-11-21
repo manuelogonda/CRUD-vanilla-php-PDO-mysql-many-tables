@@ -18,6 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <title>Create a New order</title>
 </head>
 <body>
+    <a href="show_ordereditems.php"><button type="button">Go Back</button></a>
     <h1>Place a new order</h1>
     <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
         <label for="user_id">User Id:</label>
