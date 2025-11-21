@@ -73,7 +73,7 @@ $pdo = null;
                     <td><?= htmlspecialchars($ordered_Item['product_price']) ?></td>
                     <td><?= htmlspecialchars($ordered_Item['product_name']) ?></td>
                     <td>
-                        <form action="delete_ordered_item" method="POST" onsubmit="return confirm('Be sure to delete this ordered item')">
+                        <form action="delete_ordered_item.php" method="POST" onsubmit="return confirm('Be sure to delete this ordered item')">
                            <input type="hidden" name="action" value="delete_ordered_item">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($ordered_Item['Oder_item_id']) ?>">
                             <button type="submit">Delete Item</button>
